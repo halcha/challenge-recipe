@@ -1,0 +1,158 @@
+/* Typography
+   ********** */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+/* Global Variables
+  ***************** */
+ :root {
+   --main-column-width: 42rem;
+   --h1-size : 4em;
+   --h2-size : 3em;
+   --p-size: 1.3em;
+   --h1-size-small : 2em;
+   --text-section-padding: 5rem;
+   --text-padding: 2rem;
+   --right-padding: 1rem;
+   --default-line-height: 2rem;
+   --grid-column-remainder: calc(100vw - var(--main-column-width));
+   --code-figure-offset: calc(var(--grid-column-remainder)/2);
+   --text-colour : #616161;
+   --heading-colour: #212121;
+ }
+
+/* Global Styles
+   ************* */
+
+body {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: minmax(2rem,1fr) minmax(auto, var(--main-column-width)) minmax(2rem,1fr);
+}
+
+main section, figure {
+  padding-top: var(--text-section-padding);
+  z-index: 2;
+}
+
+ul {
+  padding-top: var(--text-padding);
+}
+
+li {
+  line-height: 1.5;
+}
+
+footer {
+  display: grid;
+  grid-column: 1 / 4;
+  padding: 2rem 0;
+  place-items: center;
+}
+
+/* Typography Styles */
+ h1, h2 {
+   font-size: var(--h1-size);
+   font-weight: 300;
+   color: var(--heading-colour);
+ }
+
+ strong, li {
+   color: var(--heading-colour);
+ }
+
+ h2 {
+   font-size: var(--h2-size);
+ }
+
+ p, td {
+   color: var(--text-colour);
+ }
+
+  p, .sidebar a {
+   padding-top: var(--text-padding);
+   padding-right: var(--right-padding);
+   font-size: var(--p-size);
+   line-height: var(--default-line-height)
+ }
+ li {
+   font-size: var(--p-size);
+ }
+ .dotted-list li {
+   font-size: var(--p-size);
+   list-style-type: circle;
+ }
+/* Table Styles */
+
+ tr {
+   text-align: left;
+ }
+
+ th, td {
+   padding-top: var(--text-padding);
+   font-size: var(--p-size);
+ }
+
+ footer p {
+   padding: 0;
+ }
+/* code for videoWrapper found here: https://css-tricks.com/fluid-width-video/ */
+ .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  /* falls back to 16/9, but otherwise uses ratio from HTML */
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.code-figure {
+  position: relative;
+	width: 80vw;
+	left: calc(var(--code-figure-offset) * -1);
+  margin: 0 10vw;
+}
+
+/* sidenav based off code found here: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed2 */
+
+.sidenav {
+  display: none;
+}
+
+ @media (min-width: 1300px) {
+  .sidenav {
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 5rem;
+    right: 5rem;
+    overflow-x: hidden;
+    padding: 8px 0;
+    display: grid;
+    text-align: right;
+  }
+
+  .sidenav a {
+    text-decoration: none;
+    font-size: var(--p-size);
+    color: #2196F3;
+    line-height: var(--default-line-height);
+  }
+
+  .sidenav p {
+    padding: 0;
+    color: var(--text-colour);
+    text-decoration: underline;
+  }
+
+  .sidenav a:hover {
+    color: #064579;
+  }
+}
