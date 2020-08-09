@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Example Challenge for DECO1012</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/prism.css"/>
+</head>
+
+<body>
+	<div class="sidenav">
+		<p>Overview</p>
+		<a href="#wel">Welcome</a>
+		<a href="#tas">Your Task</a>
+		<p>Challenge Steps</p>
+		<a href="#s1">Draw a blade</a>
+		<a href="#s2">Rotate() method</a>
+		<a href="#s3">Translate() method</a>
+		<a href="#s4">Challenge - Build a windmill</a>
+		<a href="#s5">Extra Challenge - be the wind</a>
+	</div>
+	<left>
+	</left>
+	<main>
+		<section class="main-title" id="wel">
+			<h1>Welcome to the windmill puzzle</h1>
+			<p>Made by Sam Hall</p>
+		<figure class="img-container">
+			<img src="images/windmill-solved.gif" alt="Flow Field Variation" width="100%">
+			<figcaption><center>To complete this challenge figure out the puzzle <a href="#s4">below</a> to make this!<center></figcaption>
+		</figure>
+		</section>
+		<section id="tas">
+			<h2>Your Task</h2>
+			<p>To help you learn more about how translate and rotate affect the canvas and how shapes are drawn in p5.js, you're task is to make a windmill by solving a puzzle.
+			</p>
+		</section>
+		<section id="s1">
+			<h2>Draw a blade</h2>
+			<figure class="img-container">
+				<img src="images/example-step-1.png" alt="a white trapzium" width="100%">
+				<figcaption><center>Make this in the editor below to complete step one<center></figcaption>
+			</figure>
+			<p>To get you started, use the beginShape() method below to create one of the blades in the p5 editor. For more info on this method, see the <a href="https://p5js.org/reference/#/p5/beginShape" target="_blank">p5.js reference</a></p>
+			<pre data-src="prism.js" class=" language-javascript" data-src-status="loaded"><code class="language-processing">function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+	background(220);
+	// Copy and paste this into the code editor below
+	// change the vertexes to get your blade
+	//looking like the example
+	beginShape(QUADS);
+	vertex(0, 0);
+	vertex(7, 20);
+	vertex(40, 20);
+	vertex(47, 0);
+	endShape();
+}
+		</code></pre>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Make a blade to complete step one<center></figcaption>
+		</figure>
+		</section>
+		<section id="s2">
+			<h2>Rotate() Method</h2>
+			<p>Now that you've made a blade you'll need to understand rotate to figure out the puzzle. Check out the code editor below to see how rotate works. For more info on this method, see the <a href="https://p5js.org/reference/#/p5/rotate" target="_blank">p5.js reference</a></p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/d5KkW1ZGD" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Understand the rotate() method to complete step two<center></figcaption>
+		</figure>
+		</section>
+		<section id="s3">
+			<h2>Translate() Method</h2>
+			<p>You also need to understand how translate() works. Check out the code editor below to see how translate works. For more info on this method, see the <a href="https://p5js.org/reference/#/p5/translate" target="_blank">p5.js reference</a></p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/4zCmxXBr1" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Understand the translate() method to complete step three<center></figcaption>
+		</figure>
+		</section>
+		<section id="s4">
+			<h2>Challenge - Build a windmill</h2>
+			<figure class="img-container">
+				<img src="images/windmill-solved.gif" alt="Flow Field Variation" width="100%">
+				<figcaption><center>To complete this challenge figure out the puzzle <a href="#s4">below</a> to make this!<center></figcaption>
+			</figure>
+			<p>With rotate and translate under your belt, it's time to solve the puzzle! Recreate the gif above in the code editor below to solve the puzzle. We've left a bit of code in there to get you started. Below are all the methods you'll need to solve the puzzle.</p>
+			<ul>
+				<li><a href="https://p5js.org/reference/#/p5/rotate" target="_blank">rotate()</a></li>
+				<li><a href="https://p5js.org/reference/#/p5/translate" target="_blank">translate()</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for" target="_blank">for loops</a></li>
+				<li><a href="https://p5js.org/reference/#/p5/push" target="_blank">push and pop</a></li>
+			</ul>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/oJMM_1VVd" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Solve the puzzle to complete step four and finish the challenge!<center></figcaption>
+		</figure>
+		</section>
+		<section id="s5">
+			<h2>Extra Challenge - be the wind</h2>
+			<figure class="img-container">
+				<img src="images/windmill-extra-solved.gif" alt="windmill spinning with the breeze" width="100%">
+				<figcaption><center>To complete this extra challenge, make this!<center></figcaption>
+			</figure>
+			<p>If you're up for an extra challenge, use p5.sound to let your microphone change the speed that the windmill spins!</p>
+			<ul>
+				<li><a href="https://p5js.org/reference/#/libraries/p5.sound" target="_blank">p5.sound library</a></li>
+			</ul>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/oJMM_1VVd" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Solve the puzzle to complete step four<center></figcaption>
+		</figure>
+		</section>
+	</main>
+	<right></right>
+	<footer><p>made with 🧡 by the Creative Coding Research Team<p></footer>
+	<script src="js/prism.js"></script>
+</body>
+</html>
