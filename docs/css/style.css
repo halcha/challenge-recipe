@@ -96,6 +96,15 @@ a{
    font-size: var(--p-size);
  }
 
+ /* Quote Styles */
+
+  blockquote {
+    font-size: 1.75rem;
+    font-style: italic;
+    padding: 3rem 0;
+    padding-right: 6rem
+  }
+
  footer p {
    padding: 0;
  }
