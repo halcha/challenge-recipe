@@ -105,9 +105,32 @@ a{
     padding-right: 6rem
   }
 
+  /* footer stays on bottom of page */
+footer {
+  position: fixed;
+  bottom: 0rem;
+  height: 2rem;
+  width: 100%;
+  z-index: 3;
+  background: aliceblue
+}
+
  footer p {
    padding: 0;
  }
+
+
+
+
+ /* display/hide sections */
+ section {
+  display: none;
+  margin-bottom: 8rem;
+}
+
+section:target {
+  display: block;
+}
 /* code for videoWrapper found here: https://css-tricks.com/fluid-width-video/ */
  .videoWrapper {
   position: relative;
@@ -138,7 +161,33 @@ a{
   display: none;
 }
 
- @media (min-width: 1300px) {
+/* pagination */
+.pagination {
+  position: fixed;
+  bottom: 6rem;
+  background-color: aliceblue;
+  display: flex;
+  text-align: center;
+  left: -1rem;
+  margin-top: 5rem;
+  z-index: 3;
+  width: 100vw
+}
+
+.pagination a {
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #2196F3;
+  opacity: 25%;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+ @media (min-width: 1500px) {
   .sidenav {
     width: auto;
     position: fixed;
@@ -166,5 +215,9 @@ a{
 
   .sidenav a:hover {
     color: #064579;
+  }
+
+  .pagination {
+    display: none;
   }
 }
