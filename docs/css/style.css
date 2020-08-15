@@ -6,16 +6,19 @@
   ***************** */
  :root {
    --main-column-width: 42rem;
-   --h1-size : 4em;
-   --h2-size : 3em;
-   --p-size: 1.3em;
-   --h1-size-small : 2em;
+   --h1-size : 4rem;
+   --h2-size : 3rem;
+   --p-size: 1.3rem;
+   --pagination-size: 2rem;
+   --pagination-colour: white;
+   --h1-size-small : 2rem;
    --text-section-padding: 5rem;
    --text-padding: 2rem;
    --right-padding: 1rem;
    --default-line-height: 2rem;
    --grid-column-remainder: calc(100vw - var(--main-column-width));
    --code-figure-offset: calc(var(--grid-column-remainder)/2);
+   --highlight-colour: #2196F3;
    --text-colour : #616161;
    --heading-colour: #212121;
  }
@@ -83,7 +86,7 @@ footer {
    list-style-type: circle;
  }
 a{
- color: #2196F3;
+ color: var(--highlight-colour);
 }
 /* Table Styles */
 
@@ -112,7 +115,7 @@ footer {
   height: 2rem;
   width: 100%;
   z-index: 3;
-  background: aliceblue
+  background: var(--pagination-colour)
 }
 
  footer p {
@@ -122,15 +125,7 @@ footer {
 
 
 
- /* display/hide sections */
- section {
-  display: none;
-  margin-bottom: 8rem;
-}
 
-section:target {
-  display: block;
-}
 /* code for videoWrapper found here: https://css-tricks.com/fluid-width-video/ */
  .videoWrapper {
   position: relative;
@@ -155,17 +150,40 @@ section:target {
   margin: 0 10vw;
 }
 
+/* display/hide sections */
+section {
+ display: none;
+ margin-bottom: 10rem;
+}
+
+section:target {
+ display: block;
+}
+
 /* sidenav based off code found here: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed2 */
 
 .sidenav {
   display: none;
 }
 
-/* pagination */
+/* pagination - left and right display under 800px and numbers over 800px*/
+
+.pagination {
+  display: none;
+}
+
+.pagination a {
+  display: none;
+}
+
+.pagination a:first-of-type, .pagination a:last-of-type {
+  display: block;
+}
+
 .pagination {
   position: fixed;
   bottom: 6rem;
-  background-color: aliceblue;
+  background-color: var(--pagination-colour);
   display: flex;
   text-align: center;
   left: -1rem;
@@ -177,6 +195,7 @@ section:target {
 .pagination a {
   flex-grow: 1;
   text-decoration: none;
+  font-size: var(--pagination-size);
 }
 
 .pagination a.active {
@@ -186,6 +205,13 @@ section:target {
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media (min-width: 800px) {
+  .pagination a {
+    display: block;
+  }
+}
+
 
  @media (min-width: 1500px) {
   .sidenav {
@@ -217,7 +243,4 @@ section:target {
     color: #064579;
   }
 
-  .pagination {
-    display: none;
-  }
 }
