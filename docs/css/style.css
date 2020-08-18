@@ -206,13 +206,31 @@ section:target {
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
+@media only screen
+
+  and (min-device-width: 320px)
+
+  and (max-device-width: 568px)
+
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  section {
+    display: block;
+  }
+
+  .pagination {
+    display: none;
+  }
+}
+
+/* after 800px, display the numbers in pagination on laptops and desktops */
 @media (min-width: 800px) {
   .pagination a {
     display: block;
   }
 }
 
-
+/* after 1500px, display the sidenav which is a fixed table of contents to use as navigation as well as pagination */
  @media (min-width: 1500px) {
   .sidenav {
     width: auto;
