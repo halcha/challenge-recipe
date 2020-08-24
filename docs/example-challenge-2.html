@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Example Challenge for DECO1012</title>
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/prism.css"/>
+</head>
+
+<body>
+	<div class="sidenav">
+		<p>Overview</p>
+		<a href="#wel">Welcome</a>
+		<a href="#tas">Your Task</a>
+		<p>Challenge Steps</p>
+		<a href="#s1">Draw a blade</a>
+		<a href="#s2">Rotate() method</a>
+		<a href="#s3">Translate() method</a>
+		<a href="#s4">Challenge - Build a windmill</a>
+		<a href="#s5">Extra Challenge - be the wind</a>
+	</div>
+	<left>
+	</left>
+	<main>
+		<section class="main-title" id="wel">
+			<h1>Welcome to Procedural Composition</h1>
+			<p>Made by Dr Kazjon Grace</p>
+			<figure class="img-container">
+				<img src="images/one_and_three_chairs.jpg" alt="'One and three chairs', Joseph Kosuth, 1965, MoMA" width="100%">
+				<figcaption><center>"One and three chairs", Joseph Kosuth, 1965, MoMA<center></figcaption>
+			</figure>
+		<div class="pagination">
+			 <a href="#s5">&laquo;</a>
+			 <a class="active" href="#wel">1</a>
+			 <a href="#tas">2</a>
+			 <a href="#s1">3</a>
+			 <a href="#s2">4</a>
+			 <a href="#s3">5</a>
+			 <a href="#s4">6</a>
+			 <a href="#s5">7</a>
+			 <a href="#tas">&raquo;</a>
+		</div>
+		</section>
+		<section id="tas">
+			<h2>Your Task</h2>
+			<p>This is the first in a series of "Composition" challenges where we're going to ask you to create something inspired by a particular artistic style or movement.  For this first one we're going to be recreating a piece of Conceptual Art, Sol LeWitt's "Wall Drawing #56".
+			</p>
+			<h2>Conceptual Art</h2>
+			<p>If you've heard or made a crack about contemporary art being rubbish, then you were probably talking about some form of conceptual art.  From bejewelled skulls to tins of actual human excrement, the term "conceptual art" sure has made itself easy for the artistically disinclined to make fun of.  But what is it?  And more importantly, why am I reading about it in a programming class?
+			</p>
+			<blockquote cite="">"In conceptual art the idea or concept is the most important aspect of the work. When an artist uses a conceptual form of art, it means that all of the planning and decisions are made beforehand and the execution is a perfunctory affair." -- Sol LeWitt, 1967.</blockquote>
+			<p>Conceptual art is one of those movements that challenged the nature of art. The conceptualists' perspective is simple: the idea is the art, not the thing you make to express it.  Sol LeWitt is one conceptual artist whose work is perfect for us: many of his pieces are geometric arrangements of shapes and lines.  And hey, we can draw those!  This is the one we're going to be looking at today:</p>
+			<figure class="img-container">
+				<img src="images/56-1.jpg" alt="Sol Le Witt Interpretation from the Massachusets Museum of Contemporary Art" width="100%">
+				<figcaption><center>Image lifted with hypothetical permission from the Massachusets Museum of Contemporary Art<center></figcaption>
+			</figure>
+			<p>LeWitt wrote down instructions for the pieces in his Drawings Series, and considered those concepts to be the art themselves -- the act of drawing them was just a post-production step, like hitting Print on your report. The instructions for #56 are "A square is divided horizontally and vertically into four equal parts, each with lines in four directions superimposed progressively." That's the concept, the idea.  For many of his later works he didn't even draw them himself: he'd send galleries the instructions, the concept, and they'd have an installation team draw it on a wall, all without consulting the artist for details.<br><br>
+
+At the time LeWitt was making these "drawings", there was a view in the art world that medium -- the physical substance being manipulated to create, be it paint, pencil or bronze -- was critical to art.  In making descriptions of works into the work itself, LeWitt was removing the medium from the art completely. One way to look at that was that he was a troll, messing with people who were sure they knew what art was.<br><br>
+
+LeWitt even experimented with more abstract descriptions, in which much of the visual interpretation was left up to the installer.  He insisted that the axiom of conceptual art -- that the art was in the idea, not the execution -- applied even when the concept left a lot of room open for interpretation, such as "Vertical lines, not straight, not touching, covering the wall evenly" (Wall Drawing #46, 1970). That's the whole description.  It's a big wall.<br><br>
+
+The idea, having been expressed in that simple sentence, was artistically complete, and no less LeWitt's own than any of the paintings or sculptures that were actually produced by the apprentices of the great masters.  In fact, you're going to "install" the piece -- or, at least, a part of it -- today, and your rendering of it will be no less genuine than the one installed on MoCA's wall.<br><br>
+
+Enough of an art history lesson. Let's start by thinking about the image above algorithmically.  Take a minute and think: how would you break it down into code you can write?  We're clearly going to want some for loops that call the line() function a whole bunch of times.  It might be tempting to think about the four "squares" of texture we can see, but that's just our perception. As far as p5 is concerned, we're looking at four groups of lines, all drawn the same spacing apart, each drawn in a different direction.</p>
+			<div class="pagination">
+				 <a href="#wel">&laquo;</a>
+				 <a href="#wel">1</a>
+				 <a class="active" href="#tas">2</a>
+				 <a href="#s1">3</a>
+				 <a href="#s2">4</a>
+				 <a href="#s3">5</a>
+				 <a href="#s4">6</a>
+				 <a href="#s5">7</a>
+				 <a href="#s1">&raquo;</a>
+			</div>
+		</section>
+		<section id="s1">
+			<h2>Vertical Lines Across the Canvas</h2>
+			<figure class="img-container">
+				<img src="images/56-1-1.jpg" alt="Sol Le Witt Interpretation from the Massachusets Museum of Contemporary Art" width="100%">
+				<figcaption><center>We want vertical lines from the top quadrant across the whole canvas.<center></figcaption>
+			</figure>
+			<p>Let's start with the first one -- the vertical lines across the whole canvas. I'll give you the code for this one straight up, and we can use it as a blueprint for the others.</p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/GeHLKhkyb" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Here's the code for this one straight up. We can use it as a blueprint for the others.<center></figcaption>
+		</figure>
+			<div class="pagination">
+				 <a href="#tas">&laquo;</a>
+				 <a href="#wel">1</a>
+				 <a href="#tas">2</a>
+				 <a class="active" href="#s1">3</a>
+				 <a href="#s2">4</a>
+				 <a href="#s3">5</a>
+				 <a href="#s4">6</a>
+				 <a href="#s5">7</a>
+				 <a href="#s2">&raquo;</a>
+			</div>
+		</section>
+		<section id="s2">
+			<h2>Your turn: draw horizontal lines everywhere but the top corner.</h2>
+			<figure class="img-container">
+				<img src="images/56-1-2.jpg" alt="Sol Le Witt Interpretation from the Massachusets Museum of Contemporary Art" width="100%">
+				<figcaption><center>We're looking for the highlighted design everywhere on the canvas besides the top corner.<center></figcaption>
+			</figure>
+			<p>Easy, huh? Here's your first task: how would you do the horizontal lines drawn everywhere but the top left corner?  I'll give you a template to start with: in the editor below, horizontal lines are drawn everywhere.<br><br>
+
+HINT: One solution might be an if statement that tests whether you're in the top or bottom half of the screen based on the y variable that's increasing as the for loop runs!</p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/Qr2bCW0v8" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>You can check the editors in the next parts if you get totally stuck, but you'll never learn anything without trying it first<center></figcaption>
+		</figure>
+		<div class="pagination">
+			 <a href="#s1">&laquo;</a>
+			 <a href="#wel">1</a>
+			 <a href="#tas">2</a>
+			 <a href="#s1">3</a>
+			 <a class="active" href="#s2">4</a>
+			 <a href="#s3">5</a>
+			 <a href="#s4">6</a>
+			 <a href="#s5">7</a>
+			 <a href="#s3">&raquo;</a>
+		</div>
+		</section>
+		<section id="s3">
+			<h2>Draw diagonal lines.</h2>
+			<figure class="img-container">
+				<img src="images/56-1-3.jpg" alt="Sol Le Witt Interpretation from the Massachusets Museum of Contemporary Art" width="100%">
+				<figcaption><center>No we need diagonal lines but only in the bottom half of the canvas.<center></figcaption>
+			</figure>
+			<p>Now: can you draw diagonal lines? This is where you'll need to start thinking seriously about coordinates. It might help to get out a piece of paper?<br><br>
+
+Bonus content for overachievers: This can be done several ways, and one of them doesn't need an if statement!</p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/8BakGgSFM" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Understand the translate() method to complete step three<center></figcaption>
+		</figure>
+			<div class="pagination">
+				 <a href="#s2">&laquo;</a>
+				 <a href="#wel">1</a>
+				 <a href="#tas">2</a>
+				 <a href="#s1">3</a>
+				 <a href="#s2">4</a>
+				 <a class="active" href="#s3">5</a>
+				 <a href="#s4">6</a>
+				 <a href="#s5">7</a>
+				 <a href="#s4">&raquo;</a>
+			</div>
+		</section>
+		<section id="s4">
+			<h2>Opposite Diagonal Lines</h2>
+			<figure class="img-container">
+				<img src="images/56-1-4.jpg" alt="Sol Le Witt Interpretation from the Massachusets Museum of Contemporary Art" width="100%">
+				<figcaption><center>The final push! it's time for opposite diagonal lines but only in the bottom right quadrant.<center></figcaption>
+			</figure>
+			<p>Now you're thinking with for loops!  You've got this.  Last one, and this time no hints: the opposite diagonal lines, bottom right quadrant only.</p>
+		<figure class="code-figure">
+			<div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
+			<iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/pnS7uhjxs" alt="if i'm not loading, try refreshing your page" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<figcaption><center>Create opposite diagonal lines, bottom right quadrant only.to finish the challenge!<center></figcaption>
+		</figure>
+			<div class="pagination">
+				 <a href="#s3">&laquo;</a>
+				 <a href="#wel">1</a>
+				 <a href="#tas">2</a>
+				 <a href="#s1">3</a>
+				 <a href="#s2">4</a>
+				 <a href="#s3">5</a>
+				 <a class="active" href="#s4">6</a>
+				 <a href="#s5">7</a>
+				 <a href="#s5">&raquo;</a>
+			</div>
+		</section>
+		<section id="s5">
+			<h2>Congratulations!</h2>
+			<p>Once you're done with that: congrats, you're an official installer for a famous artist's work. I hope you learnt something about iterating through different points on the screen, as well as maybe something about the wild wild world of modern art.</p>
+			<div class="pagination">
+				 <a href="#s4">&laquo;</a>
+				 <a href="#wel">1</a>
+				 <a href="#tas">2</a>
+				 <a href="#s1">3</a>
+				 <a href="#s2">4</a>
+				 <a href="#s3">5</a>
+				 <a href="#s4">6</a>
+				 <a class="active" href="#s5">7</a>
+				 <a href="#wel">&raquo;</a>
+			</div>
+		</section>
+	</main>
+	<right></right>
+	<footer><p>made with 🧡 by the Creative Coding Research Team<p></footer>
+	<script src="js/prism.js"></script>
+</body>
+</html>
