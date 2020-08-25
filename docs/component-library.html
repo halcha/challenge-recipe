@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<title>Component Library for DECO1012</title>
 	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/comp-styles.css"/>
 </head>
 
 <body>
   <div class="sidenav">
-    <p>This is the Side Nav</p>
+    <p>This is the Side Nav; an alternative navigation.</p>
     <a href="#comp">Your Components</a>
     <p>Components</p>
     <a href="#h1">Heading 1</a>
@@ -40,24 +40,28 @@
       <h2>Heading 1 Component</h2>
 			<p>Below is the heading 1 component. this is used once to introduce the challenge at the start of the web page<br><br></p>
       <h1>Hello! I'm Heading 1! I use the h1 tag!</h1>
-      <p>For more on heading tags, see <a href="https://www.w3schools.com/tags/tag_hn.asp" target="_blank">here</a></p>
+			<pre><code class="language-markup">&lt;h1&gt;Hello! I'm Heading 1! I use the h1 tag!&lt;/h1&gt;</code></pre>
+      <p> For more on heading tags, see <a href="https://www.w3schools.com/tags/tag_hn.asp" target="_blank">here</a></p>
 		</section>
     <section id="h2">
       <h2>Heading 2 Component</h2>
 			<p>Below is the heading 2 component. this is used to introduce each new section of a challenge after the welcome section at the start of the web page<br><br></p>
       <h2>Hello! I'm Heading 2!I use the h2 tag!</h2>
+			<pre><code class="language-markup">&lt;h2&gt;Hello! I'm Heading 2! I use the h2 tag!&lt;/h2&gt;</code></pre>
       <p>For more on heading tags, see <a href="https://www.w3schools.com/tags/tag_hn.asp" target="_blank">here</a></p>
 		</section>
     <section id="p">
       <h2>Text Component</h2>
 			<p>Below is the text component. this is used for the general copy of your web page<br><br></p>
       <p>Hello! I'm Text! I use the p tag! I can be <strong>strong</strong> or <em>emphasised</em> or <strong><em>both</em></strong><br><br>P.S.<br><br>br<br><br>tags<br><br>break<br><br>me<br><br>up</p>
+			<pre><code class="language-markup">&lt;p&gt;Hello! I'm Text! I use the p tag! I can be &lt;strong&gt;strong&lt;/strong&gt; or &lt;em&gt;emphasised&lt;/em&gt; or &lt;strong&gt;&lt;em&gt;both&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;br&gt;P.S.&lt;br&gt;&lt;br&gt;br&lt;br&gt;&lt;br&gt;tags&lt;br&gt;&lt;br&gt;break&lt;br&gt;&lt;br&gt;me&lt;br&gt;&lt;br&gt;up&lt;/p&gt;</code></pre>
       <p>For more on p tags, see <a href="https://www.w3schools.com/tags/tag_p.asp">here</a></p>
 		</section>
 		<section id="q">
       <h2>Quote Component</h2>
 			<p>Below is the quote component. this is used for quotes from an expert source that link ideas or summarise a message you want to convey<br><br></p>
       <blockquote cite="https://www.organism.earth/library/document/future-of-communications-1">" I’m the talker in this group, and therefore in a certain kind of privileged position—supposing it wasn’t so, supposing that I wasn’t in a unique position, and that we all—everybody equally—shared each other’s full conscious knowledge. What would we do? We would have to come off it, wouldn’t we? We’d have to agree with each other. We’d have to say, “Well, hello everyone! You’re me.”</blockquote>
+			<pre><code class="language-markup">&lt;blockquote cite="https://www.organism.earth/library/document/future-of-communications-1"&gt;" I’m the talker in this group, and therefore in a certain kind of privileged position—supposing it wasn’t so, supposing that I wasn’t in a unique position, and that we all—everybody equally—shared each other’s full conscious knowledge. What would we do? We would have to come off it, wouldn’t we? We’d have to agree with each other. We’d have to say, “Well, hello everyone! You’re me.”&lt;/blockquote&gt;</pre></code>
       <p>For more on blockquote tags, see <a href="https://www.w3schools.com/tags/tag_blockquote.asp">here</a></p>
 		</section>
     <section id="ul">
@@ -70,6 +74,15 @@
         <li>List</li>
         <li>Items</li>
       </ul>
+		<pre><code class="language-markup">
+&lt;ul&gt;
+	&lt;li&gt;Hello!&lt;/li&gt;
+	&lt;li&gt;We're&lt;/li&gt;
+	&lt;li&gt;All&lt;/li&gt;
+	&lt;li&gt;List&lt;/li&gt;
+	&lt;li&gt;Items&lt;/li&gt;
+&lt;/ul&gt;
+	</pre></code>
       <p>For more on ul,ol and li tags, see <a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">here</a></p>
 		</section>
     <section id="tab">
@@ -93,6 +106,26 @@
 				 <td>Greetings</td>
 			 </tr>
 			</table>
+			<pre><code class="language-markup">
+&lt;table style="width:100%"&gt;
+ &lt;tr&gt;
+	 &lt;th&gt;Hi!&lt;/td&gt;
+	 &lt;th&gt;We're Row Headings!&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+	 &lt;td&gt;And we're data!&lt;/td&gt;
+	 &lt;td&gt;Yippee!&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+	 &lt;td&gt;Hello there&lt;/td&gt;
+	 &lt;td&gt;Hi&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+	 &lt;td&gt;Wazzup&lt;/td&gt;
+	 &lt;td&gt;Greetings&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+			</pre></code>
       <p>For more on table tags, see <a href="https://www.w3schools.com/tags/tag_table.asp" target="_blank">here</a></p>
 		</section>
     <section id="pre">
@@ -114,6 +147,12 @@
 				<img src="images/hello-there.gif" alt="a waving bear" width="100%">
 				<figcaption><center>Hi! I'm a fig caption. I add some extra info to an image like it's purpose or a call to action!<center></figcaption>
 			</figure>
+			<pre><code class="language-markup">
+&lt;figure class="img-container"&gt;
+	&lt;img src="images/hello-there.gif" alt="a waving bear" width="100%"&gt;
+	&lt;figcaption&gt;&lt;center&gt;Hi! I'm a fig caption. I add some extra info to an image like it's purpose or a call to action!&lt;center&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+			</pre></code>
       <p>For more on img tags, see <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">here</a></p>
 		</section>
 		<section id="vid">
@@ -126,6 +165,15 @@
 			</div>
 			<figcaption><center>Hi! I'm a fig caption. I add some extra info to a video like it's purpose or a call to action!<center></figcaption>
 			</figure>
+			<pre><code class="language-markup">
+&lt;figure&gt;
+&lt;div class="videoWrapper" style="--aspect-ratio: 3 / 5;"&gt;
+&lt;!-- Copy & Pasted from YouTube --&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/YQHsXMglC9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;figcaption&gt;&lt;center&gt;Hi! I'm a fig caption. I add some extra info to a video like it's purpose or a call to action!&lt;center&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+			</pre></code>
       <p>For more on iframe tags, see <a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank">here</a></p>
 		</section>
 		<section id="emb">
@@ -137,6 +185,14 @@
 				</div>
 				<figcaption><center>Here’s an example of an explore step for the rotate() method<center></figcaption>
 			</figure>
+			<pre><code class="language-markup">
+&lt;figure class="code-figure"&gt;
+	&lt;div class="videoWrapper" style="--aspect-ratio: 3 / 5;"&gt;
+	&lt;iframe width="560" height="349" src="https://editor.p5js.org" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+	&lt;/div&gt;
+	&lt;figcaption&gt;&lt;center&gt;Here’s an example of an explore step for the rotate() method&lt;center&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+			</pre></code>
       <p>For more on embedding editors, see <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Embedding_Mozilla/Embedding_the_editor" target="_blank">here</a></p>
 		</section>
 	</main>

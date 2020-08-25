@@ -21,6 +21,7 @@
    --highlight-colour: #2196F3;
    --text-colour : #616161;
    --heading-colour: #212121;
+   --text-margin: 5rem;
  }
 
 /* Global Styles
@@ -51,6 +52,10 @@ footer {
   grid-column: 1 / 4;
   padding: 2rem 0;
   place-items: center;
+}
+
+pre {
+  margin-top: var(--text-margin)!important;
 }
 
 /* Typography Styles */
@@ -98,7 +103,9 @@ a{
    padding-top: var(--text-padding);
    font-size: var(--p-size);
  }
-
+th {
+ min-width: 10rem
+}
  /* Quote Styles */
 
   blockquote {
@@ -153,7 +160,7 @@ footer {
 /* display/hide sections */
 section {
  display: none;
- margin-bottom: 10rem;
+ margin-bottom: calc(var(--text-margin)*2);
 }
 
 section:target {
@@ -187,7 +194,7 @@ section:target {
   display: flex;
   text-align: center;
   left: -1rem;
-  margin-top: 5rem;
+  margin-top: var(--text-margin);
   z-index: 3;
   width: 100vw
 }
