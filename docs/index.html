@@ -48,11 +48,11 @@
 				</tr>
 				<tr>
 					<td><a href="#s6">Design your puzzle pieces</a></td>
-					<td>Figure out how you want to break up your solved puzzle for the student to put together, discover the puzzle trick and reach the learning goal.</td>
+					<td>Figure out how you want to break up your solved puzzle for the learner to put together, discover the puzzle trick and reach the learning goal.</td>
 				</tr>
 				<tr>
 					<td><a href="#s7">Write some instructions</a></td>
-					<td>Write out in a word document how you'll walk the student through the puzzle solving process. Consider how you'll use the component library.</td>
+					<td>Write out in a word document how you'll walk the learner through the puzzle solving process. Consider how you'll use the component library.</td>
 				</tr>
 				<tr>
 					<td><a href="#s8">Put your puzzle on a webpage</a></td>
@@ -60,7 +60,7 @@
 				</tr>
 				<tr>
 					<td><a href="#s9">Write your design justification</a></td>
-					<td>Write a word document detailing your design choices and how they enrich the students learning experience.</td>
+					<td>Write a word document detailing your design choices and how they enrich the learner's experience.</td>
 				</tr>
 			</table>
       <div class="pagination">
@@ -167,11 +167,11 @@ Maybe think about a time when you were working on some code and one of these top
           <!-- FEEDBACK -->
           <!-- have this be on one line and give it some padding -->
           <th>Learning goal</th>
-          <td>What you want the students to learn by solving the puzzle.</td>
+          <td>What you want the learners to learn by solving the puzzle.</td>
         </tr>
         <tr>
           <th>Puzzle Trick</th>
-          <td>The logical problem students need to figure out to solve a logical problem. e.g. the algorithms to solve a rubix cube depending on the current configuration.</td>
+          <td>The logical problem learners need to figure out to solve a logical problem. e.g. the algorithms to solve a rubix cube depending on the current configuration.</td>
         </tr>
       </table>
       <p>Using those definitions as a guide, write the learning goal and puzzle trick for your puzzle. If you're stuck, check out this video where Scott Kim, Puzzlemaster, talks about different examples of puzzles.</p>
@@ -225,9 +225,9 @@ Maybe think about a time when you were working on some code and one of these top
         When visualising your puzzle, consider patterns in nature, artistic influences or code projects on YouTube or GitHub as inspiration. To check if you’re on the right track think about it in the terms that Scott (the puzzle-master from the <a href="#s2">previous step</a>) puts forward; is there a clear
         problem to solve and is it fun?<br><br>
 
-        Continuing on with our <a href="./example-challenge.html#wel" target="_blank">example</a> on transforming shapes, check out this sketch below thinking about the puzzle from the student’s perspective.<br><br>
+        Continuing on with our <a href="./example-challenge.html#wel" target="_blank">example</a> on transforming shapes, check out this sketch below thinking about the puzzle from the learner’s perspective.<br><br>
 
-      Remember, our student's goal is to <em>"understand how translate and rotate affect how shapes are drawn on the canvas."</em>. They'll do this by figuring out the puzzle trick (outlined in the <a href="#s2">previous step</a>). The sketch below is our idea for what the code will look when it's been solved by the student.</p>
+      Remember, our learner's goal is to <em>"understand how translate and rotate affect how shapes are drawn on the canvas."</em>. They'll do this by figuring out the puzzle trick (outlined in the <a href="#s2">previous step</a>). The sketch below is our idea for what the code will look when it's been solved by the learner.</p>
       <figure class="img-container">
         <!-- link: https://thecodingtrain.com/CodingChallenges/024-perlinnoiseflowfield.html-->
         <img src="images/step-3-img.jpg" alt="a sketch for a puzzle on transforming shapes" width="100%">
@@ -235,7 +235,7 @@ Maybe think about a time when you were working on some code and one of these top
           <center>Here's a sketch for a puzzle on transforming shapes<center>
         </figcaption>
       </figure>
-			<p>So we've sketched out what the puzzle looks like when it's solved but how does the student get here? We'll tackle this on the next page.<br><br>
+			<p>So we've sketched out what the puzzle looks like when it's solved but how does the learner get here? We'll tackle this on the next page.<br><br>
 
         When you've sketched your puzzle, continue to the next page for a guide on working out your algorithm.</p>
       <div class="pagination">
@@ -256,7 +256,7 @@ Maybe think about a time when you were working on some code and one of these top
     </section>
     <section id="s4">
       <h2>Work out your algorithm</h2>
-      <p>We've just sketched out what our puzzle will look like. But before we can figure out how the student will solve the puzzle, we need to figure how the code will work for ourselves!<br><br> It might help to break down how it's going to work in a diagram before you go and develop it. Before you can teach this, you have to have working code for your solved puzzle. After you've got it working we can break it down into learnable steps.<br><br>
+      <p>We've just sketched out what our puzzle will look like. But before we can figure out how the learner will solve the puzzle, we need to figure how the code will work for ourselves!<br><br> It might help to break down how it's going to work in a diagram before you go and develop it. Before you can teach this, you have to have working code for your solved puzzle. After you've got it working we can break it down into learnable steps.<br><br>
 
         Using your sketch as a guide, work out how the instructions you give the computer in p5.js will create your solved puzzle. This is to break down the code process and keep track of the steps you take to get to the solved puzzle.<br><br>
 
@@ -338,18 +338,18 @@ Maybe think about a time when you were working on some code and one of these top
     </section>
     <section id="s6">
       <h2>Design your puzzle pieces</h2>
-      <p>So you’ve just written the code for your puzzle like the fantastic puzzle designer you are! Now you need to break it down into learnable steps so the student can learn something by solving the puzzle.<br><br>
+      <p>So you’ve just written the code for your puzzle. Well done! Now you need to break it down into learnable steps. These are what the learner will see and use to solve the puzzle.<br><br>
 
-        The way you break down these steps won't be the same as how you worked out your algorithm. You wrote that for someone who already knew how to code it from scratch i.e. you!<br><br>
+        The way you break down these steps won't be the same as your <a href="#s4">process flow</a>. You wrote that for yourself; someone who already had the skills you're trying to teach. Now you're writing it for a less experienced student. You're writing these steps for someone who doesn't understand the code yet. They will learn by solving your puzzle.<br><br>
 
-				Now you're writing it for a less experienced student; someone who doesn't understand the code yet but will learn by solving your puzzle. Think what kind of puzzle pieces you’d want to start with if you were doing the challenge as a Design Programming student. Always keep your target user in mind.<br><br>
+        To bring it back to the user's perspective, think what kind of puzzle pieces you’d want if you were doing the challenge as a Design Programming student. Always keep your target user in mind.<br><br>
 
         Don't worry if this is confusing. Human Centred Design is like that for everyone at the start!<br><br>
 
-			Below are some example puzzle pieces with their example challenges linked. Use them to think how you can break your puzzle into learnable steps<br><br>
+			Below are some example puzzle pieces with their example challenges linked. Use them to think how you can break your puzzle down into learnable steps<br><br>
 		Create your own puzzle pieces in the <a href="https://editor.p5js.org/" target="_blank">p5 code editor</a>. Don’t forget to save it to your account for later use!<br><br>
 
-  So the puzzle piece below is all about rotation. For the transforming shapes example, it seemed easiest to break up the steps by method i.e. rotation and translation. The user can mess around with rotation via mouseX. This way, they can see that as the value of rotation changes, the blade rotates. there's also a red dot and lines (debug markers) to represent the origin and orientation of the canvas that the blade sits in (weird canvas in a canvas inception) feel free to use this debug idea in your puzzle pieces!</p>
+  So the puzzle piece below is all about rotation. For the transforming shapes example, it seemed easiest to break up the steps by method i.e. rotation and translation. The user can mess around with rotation via mouseX. This way, they can see that as the value of rotation changes, the blade rotates. there's also a red dot and lines (debug markers) to represent the origin and orientation of the canvas that the blade sits in. Feel free to use this debug idea in your puzzle pieces!</p>
       <figure class="code-figure">
         <div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
           <iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/d5KkW1ZGD" frameborder="0" allowfullscreen></iframe>
@@ -367,25 +367,25 @@ Maybe think about a time when you were working on some code and one of these top
           <center>Here’s an example of a puzzle piece for the translate() method. It's used in the <a href="./example-challenge.html#s3" target="_blank">transforming shapes challenge.</a><center>
         </figcaption>
       </figure>
-      <p>So below we've got a different style of puzzle piece. this is part of the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge.</a>. Since the learning goal is understanding how to manipulate lines in for loops across multiple directions, the puzzle breaks down that concept and builds through user up in difficulty in the same method.</p>
+      <p>So below we've got a different style of puzzle piece. this is part of the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge</a>. Since the learning goal is understanding how to use the line() method in for loops and change the output depending on position on the canvas, the puzzle breaks down that concept for the learner by giving them an easy example followed by examples getting harder as the learner becomes more comfortable with the code.</p>
 			<figure class="code-figure">
         <div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
           <iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/GeHLKhkyb" frameborder="0" allowfullscreen></iframe>
         </div>
         <figcaption>
-          <center>Here’s an example of another puzzle piece stepping a student through drawing lines. It's used in the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge.</a><center>
+          <center>Here’s an example of another puzzle piece stepping a learner through drawing lines. It's used in the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge.</a><center>
         </figcaption>
       </figure>
-      <p>This final example is that building principle we mentioned before, starting with a simple task in the puzzle and the next task on top of it. What do you think the best way is to build your puzzle pieces?</p>
+      <p>This final example is that building principle we mentioned before, starting with an easy example and getting progessively harder.</p>
 			<figure class="code-figure">
         <div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
           <iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/Qr2bCW0v8" frameborder="0" allowfullscreen></iframe>
         </div>
         <figcaption>
-          <center>Here’s another example of a puzzle piece stepping a student through drawing lines.  It's used in the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge.</a><center>
+          <center>Here’s another example of a puzzle piece stepping a learner through drawing lines.  It's used in the <a href="./example-challenge-2.html#s1" target="_blank">procedural composition challenge.</a><center>
         </figcaption>
       </figure>
-			<p>Use these examples and the resources you've made so far, build your own puzzle pieces.<br><br>
+			<p>Using these examples and the resources you've made so far, design your puzzle pieces.<br><br>
 
         When you've designed your puzzle pieces, continue to the next page for a guide on writing your challenge instructions.</p>
 			<div class="pagination">
@@ -406,24 +406,19 @@ Maybe think about a time when you were working on some code and one of these top
     </section>
     <section id="s7">
       <h2>Write your challenge instructions</h2>
-      <p>Now you’ve figured out what your puzzle pieces are, it's time to write the instructions you'll give your students so they understand what they need to do to complete their challenge.<br><br>
+      <p>Now you’ve designed your puzzle pieces, it's time to write the instructions your learners will see so they understand what they need to do to complete your challenge.<br><br>
 
-        Remember, this isn't just giving your student the puzzle and telling them to solve it. You need to make sure that the understand what they need to do at each section of your challenge.<br><br>
+        Remember, this isn't just giving a learner the puzzle and telling them to solve it. You need to make sure they understand what's expected of them in each section of the challenge. It should be clear to them what they need to do. they read the instructions, complete that part of the challenge and then move on to the next part.<br><br>
 
-        You need to help them understand what they need to do without giving the puzzle away.<br><br>
+        The tricky part should be figuring out how to do it. That's where they learn something new.<br><br>
 
-        To do this write out your instructions in a word document. See if you can mimic the writing style in the <a href="./example-challenge.html#wel" target="_blank">example challenge</a> i.e. splitting the challenge into sections, using titles for sections and providing a clear action for each section with support visual references.<br><br>
+        In short, your instructions should clearly explain what the learner needs to do without explaining how to do it!<br><br>
 
-        Create your jumbled puzzle in the <a href="https://editor.p5js.org/" target="_blank">p5 code editor</a>. Don’t forget to save it to your GitHub account for later use!</p>
-      <figure class="code-figure">
-        <div class="videoWrapper" style="--aspect-ratio: 3 / 5;">
-          <!-- Copy & Pasted from YouTube -->
-          <iframe width="560" height="349" src="https://editor.p5js.org/halcha/sketches/oJMM_1VVd" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <figcaption>
-          <center>Here’s an example of a jumbled puzzle ready to be solved<center>
-        </figcaption>
-      </figure>
+        To do this, write out your instructions in a word document. See if you can mimic the writing style in the <a href="./example-challenge.html#wel" target="_blank">example challenge</a> i.e. splitting the challenge into sections, using titles for sections and providing a clear action for each section with support visual references.<br><br>
+
+        Once you've written your instructions out, read it back and ask yourself, "Does this clearly explain what needs to be done without explaining how to do it?" If the answer is yes, you've written your instuctions!<br><br>
+
+        When you've written your instructions and read them over, continue to the next page for a guide on making a webpage.</p>
 			<div class="pagination">
         <a href="#s6">&laquo;</a>
         <a href="#wel">1</a>
@@ -442,11 +437,25 @@ Maybe think about a time when you were working on some code and one of these top
     </section>
     <section id="s8">
       <h2>Make a webpage</h2>
-      <p>With all the things you’ve previously designed, you’re ready to build a webpage using components from the component library!<br><br>
+      <p>Before moving on to building a webpage, let's do a quick review of all the things you'll need to do this. If you haven't got some of these yet, follow the links to their respective guides and get them before continuing</p>
+        <ul>
+          <li><a href="#s1" target="_blank">A topic</a></li>
+          <li><a href="#s2" target="_blank">A learning goal and puzzle trick</a></li>
+          <li><a href="#s3" target="_blank">A puzzle sketch</a></li>
+          <li><a href="#s4" target="_blank">A code process flow</a></li>
+          <li><a href="#s5" target="_blank">A solved puzzle</a></li>
+          <li><a href="#s6" target="_blank">Your puzzle pieces</a></li>
+          <li><a href="#s7" target="_blank">Your puzzle instructions</a></li>
+        </ul>
 
-        Check out <a href="./example-challenge.html" target="_blank">this example</a> challenge on transforming shapes to guide how you might write your challenge. Note how each step that we pointed out in the puzzle pieces has it's own step with it's own instructions.<br><br>
 
-        Use the code from the <a href="./component-library.html" target="_blank">component library</a> to build your webpage.
+      <p>Use the code from the <a href="./component-library.html" target="_blank">component library</a> to build your webpage.<br><br>
+
+        When you've got all of the above, you’re ready to build a webpage using components from the component library! Don't worry about making it perfect, just get what you've made into the components. You'll be adding finesse as you write your design justification in the next part.<br><br>
+
+        Check out <a href="./example-challenge.html" target="_blank">this example</a> challenge on transforming shapes to guide how you might write your challenge.<br><br>
+
+        When you've made your webpage, continue to the next page for a guide on writing your design justification.
       </p>
 			<div class="pagination">
         <a href="#s7">&laquo;</a>
@@ -466,8 +475,8 @@ Maybe think about a time when you were working on some code and one of these top
     </section>
     <section id="s9">
       <h2>Write your design justification</h2>
-      <p>Now that you’ve made your web page you need to justify your design. Go back through each step and reflect on why you think the decisions you made were good design choices. Then compile these reflections into your documentation according to
-        the <a href="" target="_blank">rubric</a>.<br><br>
+      <p>Now that you’ve made your web page it's time to justify your design. Go back through each step and reflect on why you think the decisions you made were good design choices. Then compile these reflections into your documentation according to
+        the <a href="" target="_blank">rubric</a>. <br><br>If you come across something that should be designed differently according to what is the best design choice, go ahead and change it! this is what we call feedback based iteration and it's a skill you'll foster no matter where you go in the design world.<br><br>
 
         Congratulations on reaching the end of the recipe and creating a puzzle. We hope that helping us teach programming has helped you learn more about it and get new students to fall in love with code!
       </p>
